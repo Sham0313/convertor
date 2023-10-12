@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>convertor</h2>
+        <div class="inputdiv">
+            <input type="text" name="input" id="input" placeholder="len to cm">
+
+        </div>
+        <div>
+            <button type="submit" onclick="convert()"> convert</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+
+
+<!-- csss -->
+
+<style>
+body{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: blueviolet;
+}
+#wrapper div,#wrapper h2{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    color: aquamarine;
+    letter-spacing: 1px;
+    text-decoration: solid;
+    text-transform: capitalize;
+
+}
+
+input{
+border-radius: 2px;
+border: 2px solid black;
+margin-top: 30px auto;
+height: 2em;
+width: 200px;
+padding-left:10px auto;
+}
+
+input:active{
+    border: none;   
+}
+
+#wrapper{
+    height: 180px;
+    width: 300px;
+    margin: 50px auto;
+    background-color: cadetblue;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+
+button{
+    margin-top: 20px;
+    background-color: greenyellow;
+    height: 20px;
+    padding: 0 30px;
+
+} 
+button:hover{
+    cursor: pointer;
+}
+#result{
+color: white;
+margin-top: 20px;
+font-size: 30px;
+
+}
+</style>
+
+<!-- script javacript -->
+<script>
+    function convert(){
+        let cmVal = Number(document.getElementById("input").value)
+        let inchVal = cmVal/2.54
+        let result = document.getElementById("result")
+        result.innerHTML = inchVal.toFixed(2)
+    }
+
+
+
+</script>
+
+</body>
+</html>
